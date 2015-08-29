@@ -12,55 +12,55 @@ image:
 
 Usando SQLite3 pelo terminal podemos acabar inicializando-o sem especificar o banco que queremos, escrevendo apenas
 
-    {% raw %}
-        user@host:~$ sqlite3
-    {% endraw %}
+    {% highlight bash %}
+user@host:~$ sqlite3
+    {% endhighlight %}
 
 O que implica que o trabalho que executarmos a partir daqui não será salvo automaticamente. Também pode ocorrer de inicializarmos um banco já existente, criarmos tabelas/inserirmos dados e, só depois, percebermos que não era naquele banco que queríamos inserir os dados.
 
 Considerando o primeiro caso apresentado, a solução é simples e direta, podemos usar o comando `.backup`. Para isso, basta escrever:
 
-    {% raw %}
-        sqlite> .backup meuBanco.db
-    {% endraw %}
+    {% highlight sqlite3 %}
+sqlite> .backup meuBanco.db
+    {% endhighlight %}
 
 Sendo que `meuBanco.db` foi o nome que escolhi como novo banco de dados (caso já exista um arquivo com o nome escolhido, seus dados serão sobrescrito).
 
 Em seguida basta sair da solução atual e entrar no banco criado
 
-    {% raw %}
-        sqlite> .exit
-        user@host:~$ .sqlite3 meuBanco.db
-        sqlite> 
-    {% endraw %}
+    {% highlight bash %}
+sqlite> .exit
+user@host:~$ .sqlite3 meuBanco.db
+sqlite> 
+    {% endhighlight %}
 
 No segundo caso, consideremos os seguintes bancos:
 
-    {% raw %}
-        user@host:~$ .sqlite3 meuBanco.db
-        sqlite> .schema
-        CREATE TABLE alunos(matricula INTEGER NOT NULL, nome VARCHAR(255) NOT NULL))
-        CREATE TABLE professores(registro VARCHAR(255) NOT NULL, nome VARCHAR(255) NOT NULL))
-    {% endraw %}
+    {% highlight sqlite3 %}
+user@host:~$ .sqlite3 meuBanco.db
+sqlite> .schema
+CREATE TABLE alunos(matricula INTEGER NOT NULL, nome VARCHAR(255) NOT NULL))
+CREATE TABLE professores(registro VARCHAR(255) NOT NULL, nome VARCHAR(255) NOT NULL))
+    {% endhighlight %}
 
 e o seguinte banco (sendo que a última tabela de `teste.db` foi criada e preenchida, porém, ela deveria estar em `meuBanco.db`)
 
-    {% raw %}
-        user@host:~$ .sqlite3 teste.db
-        sqlite> .schema
-        CREATE TABLE irrelevante1(nome VARCHAR(255), sobrenome VARCHAR(255)))
-        CREATE TABLE irrelevante2(idade INTEGER, acertos INTEGER NOT NULL))
-        CREATE TABLE estacionamento(vaga INTEGER NOT NULL, cliente VARCHAR(255) NOT NULL, identificador INTEGER))
-    {% endraw %}
+    {% highlight sqlite3 %}
+user@host:~$ .sqlite3 teste.db
+sqlite> .schema
+CREATE TABLE irrelevante1(nome VARCHAR(255), sobrenome VARCHAR(255)))
+CREATE TABLE irrelevante2(idade INTEGER, acertos INTEGER NOT NULL))
+CREATE TABLE estacionamento(vaga INTEGER NOT NULL, cliente VARCHAR(255) NOT NULL, identificador INTEGER))
+    {% endhighlight %}
 
 Para transferirmos a última tabela para `meuBanco.db` podemos seguir os paços:
 
-    {% raw %}
-        user@host:~$ .sqlite3 teste.db
-        sqlite> .output temp.sql
-        sqlite> .dump estacionamento
-        sqlite> .output stdout
-    {% endraw %}
+    {% highlight sqlite3 %}
+user@host:~$ .sqlite3 teste.db
+sqlite> .output temp.sql
+sqlite> .dump estacionamento
+sqlite> .output stdout
+    {% endhighlight %}
 
 Sendo que os comando:
 
@@ -72,9 +72,9 @@ Sendo que os comando:
 
 Agora podemos importar a tabela para `meuBanco.db`. Uma forma da fazer isso (caso não exista uma tabela com o nome `estacionamento` no banco)
 
-    {% raw %}
-        user@host:~$ .sqlite3 teste.db < temp.sql
-    {% endraw %}
+    {% highlight bash %}
+user@host:~$ .sqlite3 teste.db < temp.sql
+    {% endhighlight %}
 
 se a tabela já existir devemos exluí-la antes da importação dos novos dados, caso isso não seja feito haverá dados duplicados na tabela resultante (já que, na importação, ocorre a união entre as tabelas).
 

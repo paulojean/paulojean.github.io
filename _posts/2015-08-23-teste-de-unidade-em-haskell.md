@@ -20,7 +20,7 @@ Em Haskell, pelo que vi, a melhor opção é o [HSpec](http://hspec.github.io/).
 ##Instalando
 Você pode obter o HSpec pelo `cabal` com o comando
 
-    {% highlight bat %}
+    {% highlight bash %}
 cabal update && cabal install hspec
     {% endhighlight %}
 ##Escrevendo os testes
@@ -65,13 +65,13 @@ Nesse exemplo foi usado apenas a função `shouldBe` para validarmos as expectat
 #Executando os testes
 Para executarmos os testes basta rodarmos o comando
 
-    {% highlight bat %}
+    {% highlight bash %}
 runhaskell MultipleOf3And5Spec.hs
     {% endhighlight %}
 com isso obteremos uma saída como
 
 
-    {% highlight bat %}
+    {% highlight bash %}
 sum of natural numbers, multiples of 3 and 5
   return the sum below 10
   return the sum below 1000
