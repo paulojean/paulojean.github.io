@@ -2,7 +2,7 @@
 layout: post
 title: Full Text Search com SQLite
 description: "Utilizando full text search com SQLite"
-modified: 2015-08-23
+modified: 2015-02-25
 tags: [fts, sqlite, mobile]
 image:
     feature:

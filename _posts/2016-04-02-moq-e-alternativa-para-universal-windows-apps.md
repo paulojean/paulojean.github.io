@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Moq e uma alternativa ao Moq para Universal Windows Platform
-description: "Utilizando mocks em .Net e Universal Windows Platform"
-modified: 2015-08-23
+title: Moq e uma alternativa em Universal Windows Apps
+description: "Utilizando mocks em .Net e Universal Windows Apps"
+modified: 2015-04-03
 tags: [uwp, testes, mock, moq, lightmock]
 image:
     feature:
