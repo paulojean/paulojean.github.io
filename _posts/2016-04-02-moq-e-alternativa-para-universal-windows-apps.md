@@ -2,7 +2,7 @@
 layout: post
 title: Moq e uma alternativa em Universal Windows Apps
 description: "Utilizando mocks em .Net e Universal Windows Apps"
-modified: 2015-04-03
+modified: 2015-04-09
 tags: [uwp, testes, mock, moq, lightmock]
 image:
     feature:
@@ -91,15 +91,4 @@ mockContext.Assert(b => b.Salvar(It.Is<Artefato>(artefato => artefato != null)),
                 Invoked.Once);
     {% endhighlight %}
 
-No teste em si, a diferença em relação ao Moq é que precisamos de um passo intermediário (instanciar a classe de mock), fora isso ele nos dá basicamente o mesmo que Moq. Por esse motivo, o considero a melhor opção como biblioteca de `mock`.
-
-
-
-
-
-
-
-
-
-
-
+No teste em si, a diferença em relação ao Moq é que precisamos de um passo intermediário (instanciar a classe de mock), fora isso ele nos dá basicamente o mesmo que o Moq (dadas as limitações da plataforma). Por esse motivo, o considero a melhor opção como biblioteca de `mock` para Universal Windows Apps.
