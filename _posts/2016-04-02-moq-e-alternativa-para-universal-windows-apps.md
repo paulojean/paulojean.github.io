@@ -2,7 +2,7 @@
 layout: post
 title: Moq e uma alternativa em Universal Windows Apps
 description: "Utilizando mocks em .Net e Universal Windows Apps"
-modified: 2015-04-09
+modified: 2016-04-09
 tags: [uwp, testes, mock, moq, lightmock]
 image:
     feature:
