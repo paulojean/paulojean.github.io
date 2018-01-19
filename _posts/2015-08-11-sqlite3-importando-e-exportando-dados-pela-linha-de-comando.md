@@ -4,10 +4,6 @@ title: SQLite3 - Importando e exportando dados pela linha de comando
 description: "Demonstração de manipulação de banco da dados pelo terminal"
 modified: 2015-08-11
 tags: [sqlite3, terminal]
-image:
-  feature: SQLite370.svg
-  credit: D. Richard Hipp
-  creditlink: https://commons.wikimedia.org/wiki/File:SQLite370.svg#/media/File:SQLite370.svg
 ---
 
 Usando SQLite3 pelo terminal podemos acabar inicializando-o sem especificar o banco que queremos, escrevendo apenas
