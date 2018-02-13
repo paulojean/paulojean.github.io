@@ -25,7 +25,7 @@ As you can see, the second part of the previous article already show how you can
 ## Generate a certificate
 So, after you setup the proxy you need to generate a certificate on `burp`:
 
-{% highlight %}
+{% highlight bash %}
 this is part of the following gist https://gist.github.com/PaulSec/dab5d25573d7f2d7da18
 
 1. Export your Burp Certificate
