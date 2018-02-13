@@ -78,8 +78,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.12)
+  bundler (= 1.12.5)
   jekyll-theme-hydeout!
 
 BUNDLED WITH
-   1.16.1
+   1.12.5
