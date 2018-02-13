@@ -4,7 +4,7 @@ highlighter:      rouge
 
 # Setup
 title:            Paulo Sousa
-tagline:          # 'A Jekyll theme'
+tagline:          'Such blog, wow'
 description:      'Writing about stuffs, some of them might be useful'
 url:              https://paulojean.github.io
 baseurl:          # the optional subpath of your site, e.g. "/blog"
