@@ -17,7 +17,7 @@ author:
   name:           'Paulo Sousa'
   url:            https://twitter.com/paulojeangs
 
-paginate:         8
+paginate:         5
 # paginate_path:    '/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
 
@@ -27,7 +27,7 @@ plugins:
   - jekyll-paginate
 
 # Custom vars
-# version:            3.5.3
+version:            3.5.3
 sidebar_home_link:  true
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
